@@ -101,8 +101,11 @@ function mouseEvents(sweeper){
 
 					var val = sweeper.get($(this).data("row"), $(this).data("col"));
 
-					if (val > 0){
-						$(this).html(val);
+					if (val >= 0){
+						if (val > 0){
+							$(this).html(val);
+						}
+
 						var goal = sweeper.goalCheck();
 						if (goal) alert("Congratulations on your noble victory.");
 					}
@@ -140,3 +143,8 @@ $(document).bind("contextmenu", function(event){
 		}
 	}
 });
+
+//Returns a copy of array
+Array.prototype.copy = function() {
+	return this.slice(0);
+};

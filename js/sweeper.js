@@ -155,13 +155,13 @@ function Sweeper(rows, cols, mines){
 		for (var i = 0; i < neighbors.length; i++){
 			unvisited.push(neighbors[i]);
 		}
-
-		// A setTimeout loop is used to slow the algorithm down so it is not instantaneous.
-		// Looks a little better this way.
-		function loop(){
+			
+		while (unvisited.length > 0){
 			var square = unvisited.shift();
 
 			if (!square.visited && isFinite(square.val)){
+
+				// Ideally this code would be located elsewhere
 				var $curr = $("td[data-row='" + square.row + "'][data-col='" + square.col + "']");
 
 				$curr.removeClass("covered");
@@ -184,12 +184,9 @@ function Sweeper(rows, cols, mines){
 				else{
 					$curr.html(square.val);
 				}
-
 				square.setVisited(true);
 			}
-			if (unvisited.length > 0) setZeroTimeout(loop);
 		}
-		loop();
 	};
 
 	// Are there any more valid squares to uncover?
