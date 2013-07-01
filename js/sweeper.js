@@ -246,8 +246,8 @@ function Sweeper(rows, cols, mines){
 			this.newSize = this.size.copy();
 		}
 		
-		this.newSize[0] = (this.newSize[0] + val) ? (this.newSize[0] + val) : 1;
-		this.newSize[1] = (this.newSize[1] + val) ? (this.newSize[1] + val) : 1;
+		this.newSize[0] = (this.newSize[0] + val) > 1 ? (this.newSize[0] + val) : 2;
+		this.newSize[1] = (this.newSize[1] + val) > 1 ? (this.newSize[1] + val) : 2;
 
 		this.mineCheck();
 		return this.newSize;

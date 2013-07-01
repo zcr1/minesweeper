@@ -134,6 +134,7 @@ html{
 	padding: 0.5em;
 	display: inline-block;
 	box-shadow: 0 0 3px #000;
+	background-color: #F8F8F8;
 }
 
 /* Mine sweeper grid */
