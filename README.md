@@ -1,4 +1,4 @@
-sweeper
+Mine Sweeper
 =======
 
-mine sweeper
+Mine Sweeper implemented using AngularJS
