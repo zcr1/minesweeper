@@ -6,7 +6,7 @@
         this.grid = this.gameService.grid;
 
         this.clickSquare = function(square){
-            // Square at [row, col] has been clicked by user
+            // User clicked square
             if (!this.gameService.gameOver && square){
                 var val = this.gameService.getSquareValue(square);
                 if (val === -1){
@@ -18,6 +18,7 @@
         };
 
         this.newGame = function(){
+            // Start a new game
             this.gameService.newGame();
             this.grid = this.gameService.grid;
         };
