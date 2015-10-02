@@ -23,7 +23,7 @@
         };
 
         this.newGame = function(){
-            this.init(15, 40);
+            this.init(15, 30);
         };
 
         // Randomly generate mines
@@ -197,7 +197,7 @@
         }
 
 
-        this.init(15, 40);
+        this.init(15, 30);
     }
 
     function GameServiceFactory() {
