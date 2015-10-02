@@ -1,4 +1,4 @@
-Mine Sweeper
+Minesweeper
 =======
 
-Mine Sweeper implemented using AngularJS
+Minesweeper implemented using AngularJS
