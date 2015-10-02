@@ -1,251 +1,132 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-/* CSS reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
-	margin:0;
-	padding:0;
-}
-html,body {
-	margin:0;
-	padding:0;
-}
-
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-	vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-	resize: vertical;
-}
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Custom styles
-   ========================================================================== */
 html{
-	min-height: 100%;
-	background: #eeeeee; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
 
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+body{
+    /* generated using http://www.cssmatic.com/gradient-generator */
+    background: rgba(235,233,249,1);
+    background: -moz-linear-gradient(left, rgba(235,233,249,1) 0%, rgba(236,239,241,1) 27%, rgba(236,239,241,1) 73%, rgba(235,233,249,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,233,249,1)), color-stop(27%, rgba(236,239,241,1)), color-stop(73%, rgba(236,239,241,1)), color-stop(100%, rgba(235,233,249,1)));
+    background: -webkit-linear-gradient(left, rgba(235,233,249,1) 0%, rgba(236,239,241,1) 27%, rgba(236,239,241,1) 73%, rgba(235,233,249,1) 100%);
+    background: -o-linear-gradient(left, rgba(235,233,249,1) 0%, rgba(236,239,241,1) 27%, rgba(236,239,241,1) 73%, rgba(235,233,249,1) 100%);
+    background: -ms-linear-gradient(left, rgba(235,233,249,1) 0%, rgba(236,239,241,1) 27%, rgba(236,239,241,1) 73%, rgba(235,233,249,1) 100%);
+    background: linear-gradient(to right, rgba(235,233,249,1) 0%, rgba(236,239,241,1) 27%, rgba(236,239,241,1) 73%, rgba(235,233,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#ebe9f9', GradientType=1 );
+}
+
+
+#wrapper{
+    text-align: center;
 }
 
 #title{
-	width: 100%; height: 100px;
-	text-align: center;
-}
-
-#title h1{
-	color: #000;
-	margin-top: 5%;
-	text-shadow: 3px 3px 3px #BDBDBD;
-	font-size: 45px;
-}
-
-#wrap{
-	float: left;
-	height: 50%;
-	width: 100%;
-	margin-bottom: -360px;
-	text-align: center;
-
+    font-size: 3.0rem;
+    color: #7986CB;
 }
 
 #container{
-	min-width: 200px;
-	min-height: 150px;
-	margin: auto;
-	border: 1px solid #000;
-	padding: 0.5em;
-	display: inline-block;
-	box-shadow: 0 0 3px #000;
-	background-color: #F8F8F8;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    box-shadow: 0 0 3px #263238;
+    background-color: #F8F8F8;
+    margin: auto;
 }
 
-/* Mine sweeper grid */
-#grid{
-	border: 1px solid #000;
-	margin: 0 0.5em 0.5em 0;
+table .tile{
+    border: 1px solid #546E7A;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
 
-.tile{
-	border: 1px solid #000;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	position: relative;
+table .tile.covered{
+    background-color: #B0BEC5;
 }
 
-.uncovered{
-	background-color: #FFF;
+table .tile.covered:hover{
+    box-shadow: inset 0 0 3px 1px #F44336;
+    border: 1px solid #F44336;
+    cursor: pointer;
 }
 
-.covered{
-	background-color: #D9D9D9;
+table .tile.covered span, table .tile.zero span{
+    display: none;
 }
 
-.covered:hover{
-	background-color: #ABABAB;
-	cursor: pointer;
+table .tile.uncovered{
+    background-color: #ECEFF1;
 }
 
-.mine{
-	background-image: url("images/cosby.png");
-	width: 20px;
-	height: 20px;
+table .tile.mine{
+    color: #B71C1C;
+    font-weight: bold;
 }
 
-.flag{
-	color: #FF0000;
-	width: 20px;
-	height: 20px;
+table .tile.one{
+    color: #3F51B5;
 }
 
-.cheat{
-	background-color: #FCC5D8;
+table .tile.two{
+    color: #388E3C;
 }
 
-.cheat:hover{
-	background-color: #F595B5;
-	cursor: pointer;
+table .tile.three{
+    color: #F44336;
 }
 
-/**************************
-* Mine and Grid modifiers *
-**************************/
-
-.arrowUp {
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid #BDBDBD;
+table .tile.four{
+    color: #673AB7;
 }
 
-.arrowDown{
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid #BDBDBD;
+table .tile.five{
+    color: #004D40;
 }
 
-.arrowUp:hover{
-	border-bottom: 10px solid #000;
-	cursor: pointer;
+
+button{
+    margin-top: 1.5em;
+    border: none;
+    background: #3F51B5;
+    background-image: -webkit-linear-gradient(top, #3F51B5, #7986CB);
+    background-image: -moz-linear-gradient(top, #3F51B5, #7986CB);
+    background-image: -ms-linear-gradient(top, #3F51B5, #7986CB);
+    background-image: -o-linear-gradient(top, #3F51B5, #7986CB);
+    background-image: linear-gradient(to bottom, #3F51B5, #7986CB);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
 }
 
-.arrowDown:hover{
-	border-top: 10px solid #000;
-	cursor: pointer;
+button:hover{
+    background: #3949AB;
+    background-image: -webkit-linear-gradient(top, #3949AB, #5C6BC0);
+    background-image: -moz-linear-gradient(top, #3949AB, #5C6BC0);
+    background-image: -ms-linear-gradient(top, #3949AB, #5C6BC0);
+    background-image: -o-linear-gradient(top, #3949AB, #5C6BC0);
+    background-image: linear-gradient(to bottom, #3949AB, #5C6BC0);
+    text-decoration: none;
 }
 
-#addMine, #subMine{
-	margin: auto;
-}
-
-#mines{
-	width: 40px;
-	font-size: 0.75em;
-	text-align: center;
-	margin-bottom: 0.5em;
-}
-
-#gridSize{
-	width: 40px;
-	font-size: 0.75em;
-	text-align: center;
-}
-
-#increaseSize, #decreaseSize{
-	margin: auto;
-}
-
-#settings{
-	float: right;
-	margin-right: 7%;
-}
-
-#container button{
-	font-size: 0.75em;
-	margin-top: 0.5em;
-}
-
-.clear{
-	clear: both;
+button:focus{
+    outline: 0;
 }

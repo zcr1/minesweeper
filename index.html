@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Cosbysweeper</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="initial-scale=1.0, width=device-width">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	</head>
-
-	<body>
-		<div id="title">
-				<h1>Cosbysweeper</h1>
-		</div>
-
-		<div id="wrap">
-			<div id="container">
-
-				<div id="settings">
-					<div id="mines">
-						<h4>Mines</h4>
-						<div id="addMine" class="arrowUp"></div>
-						<div id="numMines">10</div>
-						<div id="subMine" class="arrowDown"></div>
-					</div>
-
-					<div id="gridSize">
-						<h4>Size</h4>
-						<div id="increaseSize" class="arrowUp"></div>
-						<div id="dimensions">[8, 8]</div>
-						<div id="decreaseSize" class="arrowDown"></div>
-					</div>
-				</div>
-
-				<div id="game"></div>
-				<button id="newGame">New Game</button>
-				<button id="cheat">Cheat</button>
-			</div>
-		</div>
-
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="js/sweeper.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Minesweeper</title>
+        <meta name="description" content="Minesweeper dawg">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-app="minesweeper">
+        <div id="wrapper" ng-controller="GameController as vm">
+            <h1 id="title">Minesweeper</h1>
+            <div id="container">
+                <div id="grid">
+                    <table>
+                        <tbody>
+                            <tr ng-repeat="row in vm.grid track by $index" ng-init="rowIndex = $index">
+                                <td class="tile"
+                                    ng-repeat="square in row track by $index"
+                                    ng-class="{
+                                        'uncovered': square.visited,
+                                        'covered': !square.visited,
+                                        'mine': square.mine,
+                                        'zero': square.val === 0,
+                                        'one': square.val === 1,
+                                        'two': square.val === 2,
+                                        'three': square.val === 3,
+                                        'four': square.val === 4,
+                                        'five': square.val === 5
+                                    }"
+                                    ng-click="vm.clickSquare(rowIndex, $index)">
+                                    <span>{{square.val}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <button ng-click="vm.newGame()">New Game</button>
+            </div>
+        </div>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+    </body>
 </html>
