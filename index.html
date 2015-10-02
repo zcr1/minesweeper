@@ -17,7 +17,7 @@
                 <div id="grid">
                     <table>
                         <tbody>
-                            <tr ng-repeat="row in vm.grid track by $index" ng-init="rowIndex = $index">
+                            <tr ng-repeat="row in vm.grid track by $index">
                                 <td class="tile"
                                     ng-repeat="square in row track by $index"
                                     ng-class="{
@@ -31,7 +31,7 @@
                                         'four': square.val === 4,
                                         'five': square.val === 5
                                     }"
-                                    ng-click="vm.clickSquare(rowIndex, $index)">
+                                    ng-click="vm.clickSquare(square)">
                                     <span>{{square.val}}</span>
                                 </td>
                             </tr>

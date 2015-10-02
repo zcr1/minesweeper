@@ -110,14 +110,14 @@
             return neighbors;
         };
 
-        // Get the value of a given square, return -1 if the square is a mine
-        this.getSquareValue = function(row,  col){
-            var square = this.grid[row][col];
+        // Get the value of a given square or return -1 if the square is a mine
+        this.getSquareValue = function(square){
+            console.log(square);
             square.visited = true;
 
             if (!square.mine){
                 if (square.val === 0){
-                    this.uncoverSquare(row, col);
+                    this.uncoverSquare(square);
                 }
                 else{
                     this.removeSquare(square);
@@ -133,14 +133,12 @@
         };
 
         // When a user picks an empty square, uncover adjacent squares using BFS
-        this.uncoverSquare = function(row, col){
+        this.uncoverSquare = function(square){
             var unvisited = [],
-                start = this.grid[row][col],
-                self = this;
-
+                start = square;
 
             start.visited = true;
-            self.removeSquare(start);
+            this.removeSquare(start);
 
             var neighbors = this.getNeighbors(start.row, start.col);
 
@@ -154,11 +152,11 @@
                 var square = unvisited.shift();
 
                 if (!square.mine){
-                    self.removeSquare(square);
+                    this.removeSquare(square);
 
                     // Empty square
                     if (square.val === 0){
-                        neighbors = self.getNeighbors(square.row, square.col);
+                        neighbors = this.getNeighbors(square.row, square.col);
 
                         for (var i = 0; i < neighbors.length; i++){
                             if (!neighbors[i].visited && !neighbors[i].mine){

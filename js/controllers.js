@@ -5,10 +5,10 @@
         this.gameService = GameService;
         this.grid = this.gameService.grid;
 
-        this.clickSquare = function(row, col){
+        this.clickSquare = function(square){
             // Square at [row, col] has been clicked by user
-            if (!this.gameService.gameOver && row != undefined && col != undefined){
-                var val = this.gameService.getSquareValue(row, col);
+            if (!this.gameService.gameOver && square){
+                var val = this.gameService.getSquareValue(square);
                 if (val === -1){
                     setTimeout(function(){
                         alert('Game Over Chum');
